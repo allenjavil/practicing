@@ -43,7 +43,7 @@ def check_winnings(columns, lines, bet, values):
                 break # if one symbol not equal, we break out of for loop. 
         else: 
             winnings += values[symbol] * bet 
-            winning_lines.append(lines + 1)
+            winning_lines.append(line + 1)
                 # what lines they won at
 
     return winnings, winning_lines
@@ -149,7 +149,6 @@ def get_bet():
     return amount
 
 def spin(balance):
-    balance = deposit()
     lines = get_number_of_lines()
     # checking that they have enough balance to bet on all the lines they want (based on initial amount input)
     while True:
